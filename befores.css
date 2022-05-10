@@ -1,0 +1,45 @@
+.github-before::before{
+    content: '|';
+    font-family: sporto1;
+    margin-left: 5px;
+}
+.about-before::before{
+    content: 'B';
+    font-family: sporto1;
+    margin-right: -13px;
+    color: teal;
+}
+.mail-before::before{
+    content: 't';
+    font-family: lecafetech2;
+    margin-left: 5px;
+}
+.chemlab-before::before{
+    content: 'B';
+    font-family: sporto1;
+    margin-left: 5px;
+    font-size: 15px;
+}
+.youtube-before::before{
+    content: 'P';
+    font-family: cov;
+    margin-left: 5px;
+    font-size: 6px;
+    color: whitesmoke;
+    background-color: teal;
+    padding: 5px;
+    border-radius: 5px;
+    font-weight: 1;
+}
+
+.before-teal::before{
+    color: teal;
+    font-weight: lighter;
+}
+
+.required-after::after{
+    content: '*';
+    margin-right: 5px;
+    color: slateblue;
+    font-size: 15px;
+}

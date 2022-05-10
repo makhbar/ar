@@ -1,0 +1,7 @@
+#footer{
+    min-height: 0.6in;
+    padding-top: 0.2in;
+    border-top: 1px dotted rgb(64, 64, 64);
+    font-size: 12px;
+    color: rgb(64, 64, 64);
+}

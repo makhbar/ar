@@ -1,0 +1,98 @@
+a{
+    text-decoration: none;
+    cursor: pointer;
+}
+.btn{
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: whitesmoke;
+    color: rgb(64, 64, 64);
+    cursor: pointer;
+}
+
+.inputgroup{
+    display: block;
+    margin-top: 10px;
+}
+
+.inputgroup label{
+    display: block;
+    font-size: 13px;
+    margin: 3px;
+    color: rgb(65, 54, 54);
+    font-weight: bold;
+}
+
+.textbox{
+    width: calc(100% - 30px);
+    margin: 5px;
+    margin-right: 10px;
+    padding: 5px;
+    background-color: whitesmoke;
+    border: none;
+    border-bottom: 2px solid steelblue;
+    outline: none;
+    font-size: 13px;
+}
+
+.textarea{
+    resize: vertical;
+    height: 0.5in;
+}
+
+.formbtn{
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: teal;
+    background-color: rgba(34, 34, 112, 0.89);
+    background-color: teal;
+    color: whitesmoke;
+    font-size: 13px;
+}
+
+.warn-card{
+    position: fixed;
+    top: 1in;
+    width: calc(100% - 40px);
+    margin: 10px;
+    padding: 10px;
+    background-color: slategray;
+    box-shadow: 0px 0px 2px 0px gray;
+}
+.warn-card .card-headline{
+    color: whitesmoke;
+}
+
+
+@media screen and (min-width: 1000px){
+    .inputgroup{
+        width: 40%;
+        margin-right: 10%;
+    }
+    .formbtn{
+        float: right;
+        margin-right: 10%;
+    }
+    .warn-card{
+        width: 3in;
+        right: calc(50vw - 1.5in - 20px);
+    }
+
+    .desktopOnly{
+        display: block;
+    }
+    .mobileOnly{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .desktopOnly{
+        display: none;
+    }
+    .mobileOnly{
+        display: block;
+    }
+}

@@ -1,0 +1,176 @@
+
+/*cards*/
+.flex{
+    display: flex;
+    flex-wrap: wrap;
+}
+.flex-ch3in{
+    flex-basis: 3in;
+}
+.card{
+    margin: 5px;
+    padding: 5px;
+    box-shadow: 0px 0px 1px 0px gray;
+}
+.card-headline{
+    font-size: 16px;
+    font-weight: bold;
+    color: teal;
+}
+.card label{
+    font-size: 13.5px;
+    margin-top: 4px;
+    font-weight: normal;
+    display: block;
+}
+.card-action{
+    width: 90%;
+    text-align: left;
+    margin-top: 10px;
+}
+.card .card-btn{
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: teal;
+    background-color: rgba(34, 34, 112, 0.89);
+    background-color: teal;
+    color: whitesmoke;
+    font-size: 13px;
+}
+.card-smalltext label{
+    font-size: 13px;
+}
+.strike{
+    position: relative;
+}
+.strike::after{
+    content: '';
+    position: absolute;
+    top: 40%;
+    right: 1px;
+    width: 100%;
+    height: 2px;
+    transform: rotateZ(-10deg);
+    border-bottom: 1px solid tomato;
+    border-top: 1px solid tomato;
+}
+.card .call-before::before{
+    font-size: 80%;
+}
+.card .pick-before::before{
+    font-size: 80%;
+}
+.card .money-before::before{
+    font-size: 100%;
+}
+.card .time-before::before{
+    font-size: 100%;
+}
+.card .required-before::before{
+    font-size: 85%;
+    margin-left: 4px;
+}
+.card .done-before::before{
+    font-size: 85%;
+    margin-left: 4px;
+}
+.card .required-before{
+    color: rgb(212, 53, 85);
+    font-size: 75%;
+}
+.card .done-before{
+    color: teal;
+    font-size: 75%;
+}
+/*befors*/
+.location-before::before{
+    content: 'c';
+    font-family: leCafeTech2;
+    margin-left: 5px;
+    font-size: 15px;
+}
+.search-before::before{
+    content: 'P';
+    margin-left: 5px;
+    font-size: 80%;
+    font-family: sporto1;
+}
+.time-before::before{
+    content: 'E';
+    font-family: sporto1;
+}
+.pick-before::before{
+    content: 'k';
+    font-family: sporto1;
+    margin-left: 5px;
+}
+.call-before::before{
+    content: 'L';
+    font-family: cov;
+    margin-left: 5px;
+}
+.price-before::before{
+    content: 'A';
+    font-family: sporto1;
+}
+.money-before::before{
+    content: 'r';
+    font-family: cov;
+}
+.required-before::before{
+    content: 'b';
+    font-family: sporto1;
+    font-size: 80%;
+}
+.done-before::before{
+    content: 'b';
+    font-family: lecafetech2;
+}
+.seat-before::before{
+    content: 'j';
+    font-family: sporto2;
+}
+.good-before::before{
+    content: 'b';
+    font-family: lecafetech2;
+}
+.add-before::before{
+    content: ')';
+    line-height: 0.1in;
+    font-size: 85%;
+    font-family: sporto1;
+}
+.warn-before::before{
+    content: '*';
+    font-size: 80%;
+    margin-left: 8px;
+    font-family: sporto1;
+}
+
+/*COLORS & Themes*/
+.bg-dark{
+    background-color: rgb(64, 64, 64);
+    color: whitesmoke;
+}
+
+.bg-light{
+    background-color: whitesmoke;
+    color: rgb(64, 64, 64);
+}
+
+.bg-funny{
+    background-color: teal;
+}
+.warn{
+    display: block;
+    font-size: 12px;
+    color: steelblue;
+    font-style: italic;
+    text-align: right;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.noshadow{
+    box-shadow: none;
+}
