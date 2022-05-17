@@ -24,19 +24,24 @@
     <link rel="stylesheet" href="./nav.css">
     <link rel="stylesheet" href="./cards.css">
     <link rel="stylesheet" href="./elements.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300&display=swap" rel="stylesheet"> 
     
-    <meta property="og:site_name" content="مخبر | أطلق العنان للابتكار" />
+    <meta property="og:site_name" content="مخبر | أطلق العنان" />
     <meta name="image" property="og:image" content="https://makhbar.github.io/ar/logo.png"/>
-    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:type" content="image/jpg"> 
     <meta property="og:image:width" content="1024">
     <meta property="og:image:height" content="1024">
-    <meta name="twitter:title" content="مخبر | أطلق العنان للابتكار" />
-    
-    <meta property='og:title' content='مخبر | أطلق العنان للابتكار'/>
+    <meta name="twitter:title" content="مخبر | أطلق العنان" />
+
+    <meta property='og:title' content="مخبر | أطلق العنان"/>
     <meta property='og:image' content='https://makhbar.github.io/ar/logo.png'/>
-    <meta property='og:description' content='الرئيسية - ابدأ مع مشروع مخبر استكشاف المخابر حولك والعمل الأكاديمي البحثي'/>
-    <meta property='og:url' content='https://makhbar.github.io/ar/'/>
-    
+    <meta property='og:description' content='أهلاً بك في مخبر - الرئيسية'/>
+    <meta property='og:url' content='https://makhbar.github.io/ar'/>
+
+
 </head>
 <body>
     <div id="nav">
@@ -45,11 +50,13 @@
         </div>
         <div class="desktopOnly navbtnsdiv">
             <a href="./add.htm">
-                <button class="navbtn">أضف أجهزتك</button>
+                <button class="navbtn disabled">أضف أجهزتك</button>
             </a>
-            <button class="navbtn disabled">تصفح الأجهزة</button>
-            <button class="navbtn disabled">تعلم</button>
-            <button class="navbtn disabled">تواصل وتشبيك</button>
+            <a href="./adduniv.htm">
+                <button class="navbtn">أضف جامعتك</button>
+            </a>
+            <button class="navbtn disabled">ابحث</button>
+            <button class="navbtn disabled">جولة مخبر</button>
         </div>
         <div id="nav-menu-btn" class="disabled">
         </div>
@@ -77,70 +84,51 @@
     </div>
 
     <div id="mainview" class="flex mobileOnly" style="padding-top: 10px;">
-        <a href="./add.htm">
+        <a href="./adduniv.htm">
             <div class="card card-smalltext bg-light flex-ch3in" style="cursor: inherit;">
-                <label style="font-weight: bold; cursor: pointer;" class="add-before before-teal">&nbsp; أضف أجهزتك</label>
+                <label style="font-weight: bold; cursor: pointer;" class="add-before before-teal">&nbsp; أضف جامعتك</label>
             </div>
         </a>
-        <!--<div class="card card-smalltext bg-light flex-ch3in">
-            <label style="font-weight: bold;" class="chemlab-before before-teal">المخبر الافتراضي</label>
-        </div>
-        <div class="card card-smalltext bg-light flex-ch3in">
-            <label style="font-weight: bold;" class="youtube-before">تعلم عبر قناتنا على يوتيوب</label>
-        </div>-->
     </div>
     <div id="action"></div>
 
     <center>
-        <h1>من نحن</h1>
-        <div class="flex" id="about">
-            <div class="card flex-ch3in">
-                <center>
-                    <div style="width: 1.5in; height: 1.5in; overflow: hidden;">
-                        <img src="./wis-pic.png" style="width: 100%; height: 100%;" alt="">
-                    </div>
-                    <label for="">د. وسام عبدالقادر</label>
-                    <label for="">
-                        مؤسس 
-                        <img src="./logo.png" style="height: 17px;" alt="">
-                    </label>
-                </center>
-                <div class="card-action">
-                    <button class="btn card-btn mail-before" onclick="copy(this, 'wessemail')">مراسلة</button>
+        <div class="flex" id="about" style="align-items: center; justify-content: center; min-height: 50vh;">
+            <div class="card flex-ch3in" style="min-height: 2in; position: relative;">
+                <div style="padding-top: 10% ;">
+                    <center>
+                        <button style="font-size: 50px; border: none; outline: none; width: 1in; height: 1in; border-radius: 50%;">
+                            0
+                        </button>
+                        <div style="display: block;">
+                            <span style="font-size: 20px; margin-top: 10px; display: block;">جامعة</span>
+                        </div>
+                    </center>
                 </div>
             </div>
-            <div class="card flex-ch3in">
-                <center>
-                    <div style="width: 1.5in; height: 1.5in; overflow: hidden;">
-                        <img src="./me-pic.png" style="width: 100%; height: 100%;" alt="">
-                    </div>
-                    <label for="">وسيم سعيد</label>
-                    <label for="">
-                        مسؤول التكنولوجيا في
-                        <img src="./logo.png" style="height: 17px;" alt="">
-                    </label>
-                </center>
-                <div class="card-action">
-                    <button class="btn card-btn mail-before" onclick="copy(this, 'w.waseemsalem@gmail.com')">مراسلة</button>
+            <div class="card flex-ch3in" style="min-height: 2in; position: relative;">
+                <div style="padding-top: 10% ;">
+                    <center>
+                        <button style="font-size: 50px; border: none; outline: none; width: 1in; height: 1in; border-radius: 50%;">
+                            0
+                        </button>
+                        <div style="display: block;">
+                            <span style="font-size: 20px; margin-top: 10px; display: block;">جهاز متاح</span>
+                        </div>
+                    </center>
                 </div>
             </div>
-            <div class="card flex-ch3in">
-                <center>
-                    <div style="width: 1.5in; height: 1in; overflow: hidden;">
-                    </div>
-                    <strong>انضم إلى فريقنا</strong>
-                    <label for="">
-                        في
-                        <img src="./logo.png" style="height: 17px;" alt="">
-                        سنكون سعداء باستقبال النكهة الفريدة التي ستضفيها إلى يوميات عملنا
-                        ، نطمح باستقبال أعضاء فريق جدد يتمتعون بالطموح والابتكار!
-                        <br><br>
-                    </label>
-                </center>
-                <div class="card-action">
-                    <button class="btn card-btn add-before desktopOnly" style="cursor: not-allowed;">&nbsp; تقدم</button>
+            <div class="card flex-ch3in" style="min-height: 2in; position: relative;">
+                <div style="padding-top: 10% ;">
+                    <center>
+                        <button style="font-size: 50px; border: none; outline: none; width: 1in; height: 1in; border-radius: 50%;">
+                            0
+                        </button>
+                        <div style="display: block;">
+                            <span style="font-size: 20px; margin-top: 10px; display: block;">عملية بحث</span>
+                        </div>
+                    </center>
                 </div>
-                <br>
             </div>
         </div>
     </center>

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مخبر | إضافة جامعتك</title>
+    <link rel="stylesheet" href="./about.css">
+    <link rel="stylesheet" href="./action.css">
+    <link rel="stylesheet" href="./befores.css">
+    <link rel="stylesheet" href="./footer.css">
+    <link rel="stylesheet" href="./mainview.css">
+    <link rel="stylesheet" href="./nav.css">
+    <link rel="stylesheet" href="./cards.css">
+    <link rel="stylesheet" href="./elements.css">
+    <link rel="stylesheet" href="./login.css">
+
+    <link rel="stylesheet" href="./font/css/sporto1.css">
+    <link rel="stylesheet" href="./font/css/sporto2.css">
+    <link rel="stylesheet" href="./font/css/sporto3.css">
+    <link rel="stylesheet" href="./font/css/sporto4.css">
+    <link rel="stylesheet" href="./font/css/sporto5.css">
+    <link rel="stylesheet" href="./font/css/sporto6.css">
+    <link rel="stylesheet" href="./font/css/cov.css">
+    <link rel="stylesheet" href="./font/css/leCafeTech2.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500&display=swap" rel="stylesheet"> 
+    
+    <meta property="og:site_name" content="مخبر | إضافة جامعتك" />
+    <meta name="image" property="og:image" content="https://makhbar.github.io/ar/logo.png"/>
+    <meta property="og:image:type" content="image/jpg"> 
+    <meta property="og:image:width" content="1024">
+    <meta property="og:image:height" content="1024">
+    <meta name="twitter:title" content="مخبر | إضافة جامعتك" />
+
+    <meta property='og:title' content='مخبر | إضافة جامعتك'/>
+    <meta property='og:image' content='https://makhbar.github.io/ar/logo.png'/>
+    <meta property='og:description' content='أهلاً بك في مخبر - يمكنك من هنا البدء بالاستخدام'/>
+    <meta property='og:url' content='https://makhbar.github.io/ar/adduniv.htm'/>
+
+</head>
+<body>
+    <div id="nav">
+        <div id="nav-logo" style="height: 100%;">
+            <img src="./logo.png" style="height: 100%;" alt="">
+        </div>
+        <div id="nav-menu-btn">
+        </div>
+    </div>
+    <div id="nav-margin"></div>
+    <div id="premainview" style="padding: 20px;">
+        <h1>أضف جامعتك على "مخبر"</h1>
+    </div>
+    <div id="mainview">
+        <div class="inputgroup">
+            <label for="">اسم منشئ الحساب</label>
+            <input type="text" name="" id="username" class="textbox reqed" placeholder="مثال: نيكولا تسلا...">
+            <span class="warn" id="warn-username"></span>
+        </div>
+        <div class="inputgroup">
+            <label for="">اسم الجامعة</label>
+            <input type="text" name="" id="univname" class="textbox reqed" placeholder="مثال: جامعة الفرات...">
+            <span class="warn" id="warn-univname"></span>
+        </div>
+        <div class="inputgroup">
+            <label for="">نوع الحساب</label>
+            <select name="" id="type" class="textbox select reqed">
+                <option value="">يرجى الاختيار</option>
+                <option value="public">عام - ستكون أجهزتك متاحة لجميع الباحثين</option>
+                <option value="specific">مخصص - للباحثين من جامعتك</option>
+                <option value="private">خاص - أنت فقط</option>
+            </select>
+            <span class="warn" id="warn-type"></span>
+        </div>
+        <div class="inputgroup">
+            <label for="">لوغو الجامعة</label>
+            <input type="file" name="" id="univlogo" class="textbox reqed">
+            <span class="warn" id="warn-univlogo"></span>
+        </div>
+        <div class="inputgroup">
+            <label for="">صورة عن وثيقة من جامعتك تخولك لإنشاء الحساب</label>
+            <input type="file" name="" id="docpicture" class="textbox reqed">
+            <span class="warn" id="warn-docpicture"></span>
+        </div>
+        <div class="inputgroup">
+            <label for="">صورة عن البطاقة الشخصية</label>
+            <input type="file" name="" id="idpicture" class="textbox reqed">
+            <span class="warn" id="warn-idpicture"></span>
+        </div>
+        <div class="inputgroup">
+            <label for="">وسيلة تواصل مع صاحب الطلب</label>
+            <input type="text" name="" id="contact" class="textbox reqed" placeholder="مثال: رقم هاتفك الجوال...">
+            <span class="warn" id="warn-contact"></span>
+        </div>
+        <div class="inputgroup">
+            <label for="">أنشئ كلمة سر للدخول في المرة القادمة</label>
+            <input type="text" name="" id="password" class="textbox reqed" placeholder="يمكنك بذلك متابعة حسابك...">
+            <span class="warn" id="warn-password"></span>
+        </div>
+        <div class="inputgroup">
+            <input type="checkbox" name="" id="x" >
+            <span for="x" style="font-size: 12px;">
+                أوافق على شروط الاستخدام متضمنة 
+                <a href="https://www.pythonanywhere.com/terms_v2/" target="_blank">شروط استخدام بايثونأنيوير</a>
+                و 
+                <a href="https://www.pythonanywhere.com/privacy_v2/" target="_blank">اتفاقية الخصوصية والكوكيز لها</a>
+                وقد اطلعت على بايثونأنيوير واطلعت على كامل التفاصيل وأقبل باستخدامه لحفظ ومعالجة بياناتي وجميع البيانات التي قد يتم رفعها عن طريق منصة مخبر.
+                وكذلك اطلعت على 
+                <a href="https://docs.github.com/en/site-policy/github-terms/github-terms-of-service" target="_blank">اتفاقية استخدام GitHub</a>
+                وقد اطلعت على GitHub واطلعت على كامل التفاصيل وأقبل باستخدامه لحفظ ومعالجة بياناتي وجميع البيانات التي قد يتم رفعها عن طريق منصة مخبر.
+            </span>
+            <span class="warn" id="warn-x" style="color: crimson;"></span>
+        </div>
+        <div class="inputgroup">
+            <div class="card">
+                <label for="" class="card-headline" id="msg"></label>
+            </div>
+        </div>
+        <div class="inputgroup">
+            <button onclick="send()">إرسال الطلب</button>
+        </div>
+    </div>
+    <div id="action"></div>  
+    <div class="warn-card" id="notifer">
+        <span class="card-headline chemlab-before" id="note">
+            يرجى ملئ الحقول المطلوبة
+        </span>
+    </div>
+    <center>
+        <div id="footer">
+            جميع الحقوق محفوظة © <br>
+            Copyright © 
+        </div>
+    </center>
+</body>
+</html>
+
+<script>
+    function prepare(raw){
+        return raw.replaceAll(/&/g, "%26").replaceAll(/\'/g, "\\'").replaceAll(/\"/g, '\\"').replaceAll(/(?:\r\n|\r|\n)/g, '<br>')
+    }
+
+    function send(){
+        reqed = document.getElementsByClassName("warn")
+        for (let index = 0; index < reqed.length; index++) {
+            const element = reqed[index];
+            element.innerHTML = ""
+        }
+        document.getElementById("msg").innerHTML = "جار العمل..."
+        $server = "https://waseemssaeed.pythonanywhere.com/mak"
+        formData = new FormData()
+        formData.append("idpicture", document.getElementById("idpicture").files[0])
+        formData.append("docpicture", document.getElementById("docpicture").files[0])
+        formData.append("univlogo", document.getElementById("univlogo").files[0])
+        formData.append("username", prepare(document.getElementById("username").value))
+        formData.append("univname", prepare(document.getElementById("univname").value))
+        formData.append("contact", prepare(document.getElementById("contact").value))
+        formData.append("type", prepare(document.getElementById("type").value))
+        formData.append("password", prepare(document.getElementById("password").value))
+
+        reqed = document.getElementsByClassName("reqed")
+        isSend = true
+        for (let index = 0; index < reqed.length; index++) {
+            const element = reqed[index];
+            if(element.value.trim() == "" || document.getElementById("x").checked != true){
+                isSend = false
+                document.getElementById("warn-"+element.id).innerHTML = "هذا الحقل مطلوب"
+                document.getElementById("msg").innerHTML = "يرجى استكمال الحقول المطلوبة"
+                notify("يرجى استكمال الحقول المطلوبة")
+                if(document.getElementById("x").checked != true){
+                    document.getElementById("warn-x").innerHTML = "اتفاقية الخدمة ضرورية للحصول عليها"
+                } 
+            }
+            if(index == reqed.length - 1 && isSend){
+                var httpGetJSON = new XMLHttpRequest;
+                if (httpGetJSON.readyState == 4 || httpGetJSON.readyState == 0){
+                    httpGetJSON.open("POST", $server + "/createUniversity");
+                    httpGetJSON.onreadystatechange = function(){
+                        if (httpGetJSON.readyState == 4)
+                        {
+                            if (httpGetJSON.status == 200)
+                            {
+                                document.getElementById("msg").innerHTML = "تم تسجيل طلبكم ، سوف يتم التواصل معكم بأقرب وقت"
+                                notify("تم تسجيل طلبكم ، سوف يتم التواصل معكم بأقرب وقت", scroll = false)
+                            } else {
+                                document.getElementById("msg").innerHTML = "خطأ في الشبكة - 200"
+                            }
+                        }  else {
+                            document.getElementById("msg").innerHTML = "خطأ في الشبكة - 4"
+                        }
+                    };
+                    httpGetJSON.send(formData);
+                    httpGetJSON.onprogress = (evt) => {
+                        document.getElementById("msg").innerHTML = "جار تسجيل الطلب..."
+                        notify("جار تسجيل الطلب...", scroll = false)
+                    }
+                    httpGetJSON.onload = ()=>{
+                        document.getElementById("msg").innerHTML = "تم تسجيل طلبكم ، سيتم التواصل معكم في أقرب وقت"
+                    }
+                    httpGetJSON.onerror = ()=>{
+                        document.getElementById("msg").innerHTML = "خطأ في الشبكة"
+                        notify( "خطأ في الشبكة", scroll = false)
+                    }
+                } else {
+                    document.getElementById("msg").innerHTML = "خطأ في الشبكة"
+                    notify( "خطأ في الشبكة", scroll = false)
+                }
+            }
+        }
+    }
+
+    usernames = ["نيكولا تسلا", "ألبرت آينشتاين", "مايكل فاراداي", "ماكس بلانك","نيلز بور"]
+    document.getElementById("username").setAttribute("placeholder", "مثال: " + usernames[Math.floor(Math.random()*usernames.length)] + "...")
+
+    document.getElementById("notifer").style.display = "none"
+    function notify(note, scroll = true){
+        document.getElementById("notifer").style.display = "block"
+        document.getElementById("note").innerHTML = "&nbsp;&nbsp;" + note
+        if(scroll)
+            window.scrollTo(0,0)
+
+        setTimeout(() => {
+            document.getElementById("notifer").style.display = "none"
+        }, 2000);
+    }
+    window.scrollTo(0,0)
+</script>
