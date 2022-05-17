@@ -149,7 +149,8 @@
             element.innerHTML = ""
         }
         document.getElementById("msg").innerHTML = "جار العمل..."
-        $server = "https://waseemssaeed.pythonanywhere.com/mak"
+        //$server = "https://waseemssaeed.pythonanywhere.com/mak"
+        $server = "http://127.0.0.1:5000/mak"
         formData = new FormData()
         formData.append("idpicture", document.getElementById("idpicture").files[0])
         formData.append("docpicture", document.getElementById("docpicture").files[0])
@@ -164,15 +165,16 @@
         isSend = true
         for (let index = 0; index < reqed.length; index++) {
             const element = reqed[index];
-            if(element.value.trim() == "" || document.getElementById("x").checked != true){
+            if(element.value.trim() == ""){
                 isSend = false
                 document.getElementById("warn-"+element.id).innerHTML = "هذا الحقل مطلوب"
                 document.getElementById("msg").innerHTML = "يرجى استكمال الحقول المطلوبة"
                 notify("يرجى استكمال الحقول المطلوبة")
-                if(document.getElementById("x").checked != true){
-                    document.getElementById("warn-x").innerHTML = "اتفاقية الخدمة ضرورية للحصول عليها"
-                } 
             }
+            if(document.getElementById("x").checked != true){
+                document.getElementById("warn-x").innerHTML = "اتفاقية الخدمة ضرورية للحصول عليها"
+                notify("يرجى استكمال الحقول المطلوبة")
+            } 
             if(index == reqed.length - 1 && isSend){
                 var httpGetJSON = new XMLHttpRequest;
                 if (httpGetJSON.readyState == 4 || httpGetJSON.readyState == 0){
@@ -182,8 +184,13 @@
                         {
                             if (httpGetJSON.status == 200)
                             {
-                                document.getElementById("msg").innerHTML = "تم تسجيل طلبكم ، سوف يتم التواصل معكم بأقرب وقت"
-                                notify("تم تسجيل طلبكم ، سوف يتم التواصل معكم بأقرب وقت", scroll = false)
+                                if(httpGetJSON.responseText != "null"){
+                                    document.getElementById("msg").innerHTML = "تم تسجيل طلبكم ، سوف يتم التواصل معكم بأقرب وقت"
+                                    notify("تم تسجيل طلبكم ، سوف يتم التواصل معكم بأقرب وقت", scroll = false)
+                                } else {
+                                    document.getElementById("msg").innerHTML = "خطأ في الطلب"
+                                    notify("خطأ في الطلب", scroll = false)
+                                }
                             } else {
                                 document.getElementById("msg").innerHTML = "خطأ في الشبكة - 200"
                             }
@@ -195,9 +202,6 @@
                     httpGetJSON.onprogress = (evt) => {
                         document.getElementById("msg").innerHTML = "جار تسجيل الطلب..."
                         notify("جار تسجيل الطلب...", scroll = false)
-                    }
-                    httpGetJSON.onload = ()=>{
-                        document.getElementById("msg").innerHTML = "تم تسجيل طلبكم ، سيتم التواصل معكم في أقرب وقت"
                     }
                     httpGetJSON.onerror = ()=>{
                         document.getElementById("msg").innerHTML = "خطأ في الشبكة"
