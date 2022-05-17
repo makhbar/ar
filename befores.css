@@ -43,3 +43,9 @@
     color: slateblue;
     font-size: 15px;
 }
+
+.settings-before::before{
+    content: 'R';
+    font-family: lecafetech2;
+    margin-left: 5px;
+}
