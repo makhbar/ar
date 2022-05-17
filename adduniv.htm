@@ -56,8 +56,8 @@
     <div id="mainview">
         <div class="inputgroup">
             <label for="">اسم منشئ الحساب</label>
-            <input type="text" name="" id="username" class="textbox reqed" placeholder="مثال: نيكولا تسلا...">
-            <span class="warn" id="warn-username"></span>
+            <input type="text" name="" id="mak-unamer" class="textbox reqed" placeholder="مثال: نيكولا تسلا...">
+            <span class="warn" id="warn-mak-unamer"></span>
         </div>
         <div class="inputgroup">
             <label for="">اسم الجامعة</label>
@@ -96,13 +96,13 @@
         </div>
         <div class="inputgroup">
             <label for="">أنشئ كلمة سر للدخول في المرة القادمة</label>
-            <input type="text" name="" id="password" class="textbox reqed" placeholder="يمكنك بذلك متابعة حسابك...">
-            <span class="warn" id="warn-password"></span>
+            <input type="mak-pw" name="" id="mak-pw" class="textbox reqed" placeholder="يمكنك بذلك متابعة حسابك...">
+            <span class="warn" id="warn-mak-pw"></span>
         </div>
         <div class="inputgroup">
             <input type="checkbox" name="" id="x" >
             <span for="x" style="font-size: 12px;">
-                أوافق على شروط الاستخدام متضمنة 
+                أوافق على ملكية البيانات المدخلة أعلاه لي وإرسال الطلب بها وعلى شروط الاستخدام متضمنة 
                 <a href="https://www.pythonanywhere.com/terms_v2/" target="_blank">شروط استخدام بايثونأنيوير</a>
                 و 
                 <a href="https://www.pythonanywhere.com/privacy_v2/" target="_blank">اتفاقية الخصوصية والكوكيز لها</a>
@@ -154,11 +154,11 @@
         formData.append("idpicture", document.getElementById("idpicture").files[0])
         formData.append("docpicture", document.getElementById("docpicture").files[0])
         formData.append("univlogo", document.getElementById("univlogo").files[0])
-        formData.append("username", prepare(document.getElementById("username").value))
+        formData.append("username", prepare(document.getElementById("mak-unamer").value))
         formData.append("univname", prepare(document.getElementById("univname").value))
         formData.append("contact", prepare(document.getElementById("contact").value))
         formData.append("type", prepare(document.getElementById("type").value))
-        formData.append("password", prepare(document.getElementById("password").value))
+        formData.append("password", prepare(document.getElementById("mak-pw").value))
 
         reqed = document.getElementsByClassName("reqed")
         isSend = true
@@ -211,8 +211,8 @@
         }
     }
 
-    usernames = ["نيكولا تسلا", "ألبرت آينشتاين", "مايكل فاراداي", "ماكس بلانك","نيلز بور"]
-    document.getElementById("username").setAttribute("placeholder", "مثال: " + usernames[Math.floor(Math.random()*usernames.length)] + "...")
+    makunamers = ["نيكولا تسلا", "ألبرت آينشتاين", "مايكل فاراداي", "ماكس بلانك","نيلز بور"]
+    document.getElementById("mak-unamer").setAttribute("placeholder", "مثال: " + makunamers[Math.floor(Math.random()*makunamers.length)] + "...")
 
     document.getElementById("notifer").style.display = "none"
     function notify(note, scroll = true){
