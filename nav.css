@@ -6,6 +6,7 @@
     padding: 10px;
     height: 0.45in;
     background-color: white;
+    z-index: 9999999;
 }
 #nav-margin{
     height: 0.7in;
