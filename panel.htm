@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مخبر | أطلق العنان</title>
+    <link rel="stylesheet" href="./about.css">
+    <link rel="stylesheet" href="./action.css">
+    <link rel="stylesheet" href="./befores.css">
+    <link rel="stylesheet" href="./footer.css">
+    <link rel="stylesheet" href="./mainview.css">
+    <link rel="stylesheet" href="./nav.css">
+    <link rel="stylesheet" href="./cards.css">
+    <link rel="stylesheet" href="./elements.css">
+    <link rel="stylesheet" href="./login.css">
+
+    <link rel="stylesheet" href="./font/css/sporto1.css">
+    <link rel="stylesheet" href="./font/css/sporto2.css">
+    <link rel="stylesheet" href="./font/css/sporto3.css">
+    <link rel="stylesheet" href="./font/css/sporto4.css">
+    <link rel="stylesheet" href="./font/css/sporto5.css">
+    <link rel="stylesheet" href="./font/css/sporto6.css">
+    <link rel="stylesheet" href="./font/css/cov.css">
+    <link rel="stylesheet" href="./font/css/leCafeTech2.css">
+    <link rel="stylesheet" href="./font/Tajawal.css">
+    
+
+</head>
+<body>
+    <div id="nav">
+        <div id="nav-logo" style="height: 100%;">
+            <img src="./logo.png" style="height: 100%;" alt="">
+        </div>
+        <div id="nav-menu-btn">
+        </div>
+    </div>
+    <div id="nav-margin"></div>
+    <div id="premainview">
+        <div class="card card-smalltext bg-dark" style="background-color: rgb(115, 104, 187);">
+            <label style="font-weight: bold;">أهلاً بك! هنا يمكنك إضافة أجهزتك</label>
+            <label class="card-content" style="margin-bottom: 10px;">
+                إنه الإصدار (ألفا) من التطبيق ، في الوقت الحالي يمكنك إضافة أجهزة
+                باستخدام رمز الإدخال السري الخاص بك الذي حصلت عليه من إدارة المشروع
+            </label>
+        </div>
+    </div>
+    <style>
+        .key{
+            padding: 5px;
+            width: calc(100% - 10px);
+            border: 1px solid rgb(64, 64, 64);
+            display: block;
+            margin-top: 10px;
+            text-align: center;
+        }
+    </style>
+    <div id="mainview">
+        <div id="login">
+            <center>
+                <div class="login-card card">
+                    <!--<div class="inputgroup">
+                        <label for="">الكلية</label>
+                        <input type="text" id="login-college" class="textbox" placeholder="الكلية...">
+                    </div>
+                    <div class="inputgroup">
+                        <label for="">المخبر</label>
+                        <input type="text" id="login-lab" class="textbox" placeholder="المخبر...">
+                    </div>-->
+                    <div class="inputgroup">
+                        <label for="">كلمة المرور</label>
+                        <input type="password" id="mak-pw" class="textbox" placeholder="كلمة المرور التي قمت بإدخالها لدى التسجيل...">
+                    </div>
+
+                    <div class="inputgroup">
+                        <button onclick="login(this)" class="btn" style="background-color: slateblue; color: whitesmoke; padding: 5px; font-size: 16px;">دخول</button>
+                    </div>
+                </div>
+            </center>
+        </div> 
+    </div>
+    <div id="action"></div>  
+    <div class="warn-card" id="notifer">
+        <span class="card-headline chemlab-before" id="note">
+            يرجى ملئ الحقول المطلوبة
+        </span>
+    </div>
+    <center>
+        <div id="footer">
+            جميع الحقوق محفوظة © <br>
+            Copyright © 
+        </div>
+    </center>
+</body>
+</html>
+
+<script src="./oeip-lib.js"></script>
+<script src="./jslib.js"></script>
+<script>
+    document.getElementById("notifer").style.display = "none"
+
+    inputs = document.getElementsByClassName("textbox")
+    for (let index = 0; index < inputs.length; index++) {
+        const element = inputs[index];
+        element.value = ""
+    }
+
+    function notify(note){
+        document.getElementById("notifer").style.display = "block"
+        document.getElementById("note").innerHTML = "&nbsp;&nbsp;" + note
+
+        setTimeout(() => {
+            document.getElementById("notifer").style.display = "none"
+        }, 2000);
+    }
+
+    window.scrollTo(0,0)
+</script>
+
+<script>
+    $server = "https://waseemssaeed.pythonanywhere.com/mak"
+    function login(target){
+        target.innerHTML = "جار الدخول..."
+        formData = new FormData()
+        formData.append("password", document.getElementById("mak-pw").value)
+        var httpGetJSON = new XMLHttpRequest;
+        if (httpGetJSON.readyState == 4 || httpGetJSON.readyState == 0){
+            httpGetJSON.open("POST", $server + "/getKeys");
+            httpGetJSON.onreadystatechange = function(){
+                if (httpGetJSON.readyState == 4)
+                {
+                    if (httpGetJSON.status == 200)
+                    {
+                        if(httpGetJSON.responseText.split("_ok-").length >> 0){
+                            keys = JSON.parse(httpGetJSON.responseText.split("_ok-")[1])
+                            document.getElementById("login").style.display = "none"
+                            document.getElementById("mainview").innerHTML = "<h2>أكواد الإدخال الخاصة بك</h2>" 
+                            for (const key in keys) {
+                                if (Object.hasOwnProperty.call(keys, key)) {
+                                    const code = keys[key];
+                                    document.getElementById("mainview").innerHTML += "<span class='key'>" + key + "</span>"
+                                }
+                            }
+                        } else {
+                            target.innerHTML = "خطأ في الشبكة..."
+                        }
+                    } else {
+                        target.innerHTML = "خطأ في الشبكة..."
+                    }
+                }  else {
+                    target.innerHTML = "خطأ في الشبكة..."
+                }
+            };
+            httpGetJSON.send(formData);
+        } else {
+            //document.getElementById("msg").innerHTML = "خطأ في الشبكة"
+            notify( "خطأ في الشبكة", scroll = false)
+        }
+    }
+</script>
