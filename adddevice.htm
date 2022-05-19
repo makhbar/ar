@@ -212,7 +212,7 @@
 
         <div class="inputgroup">
             <label  class="required-after">صورة الجهاز</label>
-            <input class="textbox {$req$}" type="file" id="{$_img$}">
+            <input class="textbox {$req$}" class="file" type="file" id="{$_img$}" onchange="addFileCheck(event)">
             <span class="warn" id="dimg-warn"></span>
         </div>
         <div class="inputgroup">
@@ -386,5 +386,16 @@
         console.log("called: " + e.target.innerHTML)
         _$("dabout").innerHTML = _v$("dabout") + e.target.innerHTML
         _$("dabout").value = _v$("dabout") + e.target.innerHTML
+    }
+
+    function addFileCheck(e){
+        if(e.target.files[0].size > 60000){
+            e.target.value = ""
+            notify("حجم الملف كبير جداً", scroll=false)
+        }
+        if(e.target.files.length > 1){
+            e.target.value = ""
+            notify("يرجى تحديد صورة رئيسية واحدة", scroll=false)
+        }
     }
 </script>
