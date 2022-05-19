@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مخبر | إضافة جهاز</title>
+    <link rel="stylesheet" href="./about.css">
+    <link rel="stylesheet" href="./action.css">
+    <link rel="stylesheet" href="./befores.css">
+    <link rel="stylesheet" href="./footer.css">
+    <link rel="stylesheet" href="./mainview.css">
+    <link rel="stylesheet" href="./nav.css">
+    <link rel="stylesheet" href="./cards.css">
+    <link rel="stylesheet" href="./elements.css">
+    <link rel="stylesheet" href="./login.css">
+
+    <link rel="stylesheet" href="./font/css/sporto1.css">
+    <link rel="stylesheet" href="./font/css/sporto2.css">
+    <link rel="stylesheet" href="./font/css/sporto3.css">
+    <link rel="stylesheet" href="./font/css/sporto4.css">
+    <link rel="stylesheet" href="./font/css/sporto5.css">
+    <link rel="stylesheet" href="./font/css/sporto6.css">
+    <link rel="stylesheet" href="./font/css/cov.css">
+    <link rel="stylesheet" href="./font/css/leCafeTech2.css">
+    <link rel="stylesheet" href="./font/Tajawal.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300&display=swap" rel="stylesheet"> 
+    
+    <meta property="og:site_name" content="مخبر | إضافة أجهزة" />
+    <meta name="image" property="og:image" content="https://makhbar.github.io/ar/logo.png"/>
+    <meta property="og:image:type" content="image/jpg"> 
+    <meta property="og:image:width" content="1024">
+    <meta property="og:image:height" content="1024">
+    <meta name="twitter:title" content="مخبر | إضافة أجهزة" />
+
+    <meta property='og:title' content='مخبر | إضافة أجهزة'/>
+    <meta property='og:image' content='https://makhbar.github.io/ar/logo.png'/>
+    <meta property='og:description' content='أهلاً بك في مخبر - يمكنك هنا إضافة أجهزتك'/>
+    <meta property='og:url' content='https://makhbar.github.io/ar/adddevice.htm'/>
+</head>
+<body>
+    <div id="nav">
+        <div id="nav-logo" style="height: 100%;">
+            <img src="./logo.png" style="height: 100%;" alt="">
+        </div>
+        <div id="nav-menu-btn">
+        </div>
+    </div>
+    <div id="nav-margin"></div>
+    <div id="premainview">
+        <div class="card card-smalltext bg-dark" style="background-color: rgb(115, 104, 187);">
+            <label style="font-weight: bold;">أهلاً بك! هنا يمكنك إضافة أجهزتك</label>
+            <label class="card-content" style="margin-bottom: 10px;">
+                إنه الإصدار (ألفا) من التطبيق ، في الوقت الحالي يمكنك إضافة أجهزة
+                باستخدام رمز الإدخال السري الخاص بك الذي حصلت عليه من إدارة المشروع
+            </label>
+        </div>
+    </div>
+    <div id="mainview">
+        <div id="login">
+            <center>
+                <div class="login-card card">
+                    <!--<div class="inputgroup">
+                        <label >الكلية</label>
+                        <input type="text" id="login-college" class="textbox" placeholder="الكلية...">
+                    </div>
+                    <div class="inputgroup">
+                        <label >المخبر</label>
+                        <input type="text" id="login-lab" class="textbox" placeholder="المخبر...">
+                    </div>-->
+                    <div class="inputgroup">
+                        <label >اسم صاحب الإدخال</label>
+                        <input type="text" id="login-ddataentry" class="textbox" placeholder="الموظف الذي يقوم بالإدخال...">
+                    </div>
+                    <div class="inputgroup">
+                        <label >الكلية</label>
+                        <input type="text" id="login-dcollege" class="textbox" placeholder="الموظف الذي يقوم بالإدخال...">
+                    </div>
+                    <div class="inputgroup">
+                        <label >المخبر</label>
+                        <input type="text" id="login-dlab" class="textbox" placeholder="الموظف الذي يقوم بالإدخال...">
+                    </div>
+                    <div class="inputgroup">
+                        <label >رمز الإدخال</label>
+                        <input type="password" id="login-dkey" class="textbox" placeholder="رمز الإدخال...">
+                    </div>
+
+                    <div class="inputgroup">
+                        <button onclick="login(this)" class="btn" style="background-color: slateblue; color: whitesmoke; padding: 5px; font-size: 16px;">دخول</button>
+                    </div>
+                </div>
+            </center>
+        </div> 
+    </div>
+    <div id="action"></div>  
+
+    <center>
+        <div id="footer">
+            جميع الحقوق محفوظة © <br>
+            Copyright © 
+        </div>
+    </center>
+</body>
+</html>
+
+<div id="templates" style="display: none;">
+    <div id="temp-entry">
+        <div class="inputgroup">
+            <label  class="required-after">اسم الجهاز باللغة العربية</label>
+            <input class="textbox {$req$} refill {$getvalue$}" id="{$_name$}" type="text" placeholder="مثال: مقياس فولت...">
+            <span class="warn" id="dname-warn"></span>
+        </div>
+        <div class="inputgroup">
+            <label  class="required-after">اسم الجهاز باللغة الإنكليزية</label>
+            <input class="textbox refill {$getvalue$}" id="{$_nameen$}" type="text" placeholder="مثال: Volt Meter...">
+            <span class="warn" id="dnameen-warn"></span>
+        </div>
+        <div class="inputgroup">
+            <label class="required-after">رقم الجهاز في المخبر</label>
+            <input class="textbox refill {$req$} {$getvalue$}" id="{$_id$}" type="text" placeholder="مثال: A3-B...">
+            <span class="warn" id="did-warn"></span>
+        </div>
+        <div class="inputgroup">
+            <label  class="required-after">النوع</label>
+            <select class="textbox {$req$} refill {$getvalue$}" name="" id="{$_type$}">
+                <option value="">يرجى الاختيار</option>
+                <option value="كهرباء وإلكترونيات">كهرباء وإلكترونيات</option>
+                <option value="others">أخرى</option>
+            </select>
+            <span class="warn" id="dtype-warn"></span>
+        </div>
+        <div class="inputgroup">
+            <label  class="required-after">حالة الجهاز</label>
+            <select class="textbox {$req$} refill {$getvalue$}" name="" id="{$_status$}">
+                <option value="">يرجى الاختيار</option>
+                <option value="working">يعمل بشكل سليم</option>
+                <option value="needmat">بحاجة المواد الخام</option>
+                <option value="needmaint">بحاجة صيانة</option>
+                <option value="needexpert">بحاجة خبرات للتشغيل</option>
+                <option value="notworking">لا يعمل</option>
+            </select>
+            <span class="warn" id="dstatus-warn"></span>
+        </div>
+        <div class="inputgroup">
+            <label  class="required-after">شرح</label>
+            <textarea class="textbox textarea {$req$} refill {$getvalue$}" name="" id="{$_about$}" placeholder="ساعد الباحث على معرفة هذا الجهاز أكثر..."></textarea>
+            <span class="warn" id="dabout-warn"></span>
+            <style>
+                .schar{
+                    width: 0.3in;
+                    height: 0.3in;
+                    border: none;
+                    outline: none;
+                    border: 1px dotted steelblue;
+                    cursor: pointer;
+                    margin: 2px;
+                }
+
+            </style>
+            <div id="specialChars">
+                <button class="schar" onclick="addSpecialChar(event)">&alpha;</button>
+                <button class="schar" onclick="addSpecialChar(event)">&beta;</button>
+                <button class="schar" onclick="addSpecialChar(event)">&gamma;</button>
+                <button class="schar" onclick="addSpecialChar(event)">&Gamma;</button>
+                <button class="schar" onclick="addSpecialChar(event)">&delta;</button>
+                <button class="schar" onclick="addSpecialChar(event)">&Delta;</button>
+                <button class="schar" onclick="addSpecialChar(event)">&lambda;</button>
+                <button class="schar" onclick="addSpecialChar(event)">&psi;</button>
+                <button class="schar" onclick="addSpecialChar(event)">&omega;</button>
+                <button class="schar" onclick="addSpecialChar(event)">&Omega;</button>
+                <button class="schar" onclick="addSpecialChar(event)">&phi;</button>
+                <button class="schar" onclick="addSpecialChar(event)">&Phi;</button>
+                <button class="schar" onclick="addSpecialChar(event)">&pi;</button>
+                <button class="schar" onclick="addSpecialChar(event)">&chi;</button>
+                <button class="schar" onclick="addSpecialChar(event)">&theta;</button>
+                <button class="schar" onclick="addSpecialChar(event)">&eta;</button>
+                <button class="schar" onclick="addSpecialChar(event)">&mu;</button>
+                <button class="schar" onclick="addSpecialChar(event)">&zeta;</button>
+                <button class="schar" onclick="addSpecialChar(event)">&tau;</button>
+                <button class="schar" onclick="addSpecialChar(event)">&epsilon;</button>
+                <button class="schar" onclick="addSpecialChar(event)">&upsilon;</button>
+                <button class="schar" onclick="addSpecialChar(event)">&sigma;</button>
+                <button class="schar" onclick="addSpecialChar(event)">&Sigma;</button>
+            </div>
+        </div>
+        <div class="inputgroup">
+            <label  class="required-after">الغاية من الجهاز</label>
+            <textarea class="textbox textarea {$req$} refill {$getvalue$}" name="" id="{$_why$}" placeholder="لأي منفعة يمكن استخدام الجهاز؟..."></textarea>
+            <span class="warn" id="dwhy-warn"></span>
+        </div>
+
+        <div class="inputgroup">
+            <label  class="required-after">الكلية</label>
+            <input class="textbox {$req$} {$getvalue$}" type="text" value="{$dcollege$}" id="{$_college$}" placeholder="مثال: A3-B...">
+            <span class="warn" id="dcollege-warn"></span>
+        </div>
+
+        <div class="inputgroup">
+            <label  class="required-after">المخبر</label>
+            <input class="textbox {$req$} {$getvalue$}" type="text" value="{$dlab$}" id="{$_lab$}" placeholder="مثال: A3-B...">
+            <span class="warn" id="dlab-warn"></span>
+        </div>
+
+        <div class="inputgroup">
+            <label  class="required-after">اسم صاحب الإدخال</label>
+            <input class="textbox {$req$} {$getvalue$}" type="text" value="{$ddataentry$}" id="{$_dataent$}" placeholder="مثال: A3-B...">
+            <span class="warn" id="ddataent-warn"></span>
+        </div>
+
+        <div class="inputgroup">
+            <label  class="required-after">صورة الجهاز</label>
+            <input class="textbox {$req$}" type="file" id="{$_img$}">
+            <span class="warn" id="dimg-warn"></span>
+        </div>
+        <div class="inputgroup">
+            <label  class="required-after">الرمز السري</label>
+            <input class="textbox {$req$} {$getvalue$}" type="password" style="cursor: not-allowed;" disabled value="{$dkey$}" id="{$_key$}" placeholder="رمز الإدخال الخاص بك...">
+            <span class="warn" id="key-warn"></span>
+        </div>
+        <div class="inputgroup">
+            <div class="card">
+                <label  class="card-headline" id="msg"></label>
+            </div>
+        </div>
+        <center>
+            <br>
+            <div class="inputgroup">
+                <button class="btn formbtn" onclick="add(event)">
+                    إضافة الجهاز
+                </button>
+            </div>
+        </center>
+
+        <div class="warn-card" id="notifer">
+            <span class="card-headline chemlab-before" id="note">
+                يرجى ملئ الحقول المطلوبة
+            </span>
+        </div>
+        <br><br><br>
+    </div>
+</div>
+
+<script src="./oeip-lib.js"></script>
+<script src="./jslib.js"></script>
+<script>
+    function add(e){
+        reqed = document.getElementsByClassName("warn")
+        for (let index = 0; index < reqed.length; index++) {
+            const element = reqed[index];
+            element.innerHTML = ""
+        }
+        document.getElementById("msg").innerHTML = "جار العمل..."
+        $server = "https://waseemssaeed.pythonanywhere.com/mak"
+        //$server = "http://127.0.0.1:5000/mak"
+        formData = new FormData()
+        formData.append("dimg", document.getElementById("dimg").files[0])
+        
+        valuesToBeGot = document.getElementsByClassName("getvalue")
+        for (let index = 0; index < valuesToBeGot.length; index++) {
+            const element = valuesToBeGot[index];
+            formData.append(element.id, prepare(element.value))
+            if(index == valuesToBeGot.length - 1){
+                work()
+            }
+        }
+
+        function work(){
+            reqed = document.getElementsByClassName("req")
+            isSend = true
+            for (let index = 0; index < reqed.length; index++) {
+                const element = reqed[index];
+                if(element.value == ""){
+                    isSend = false
+                    document.getElementById(element.id + "-warn").innerHTML = "هذا الحقل مطلوب"
+                    console.log(element.value + " is the value of " + element.id )
+                    document.getElementById("msg").innerHTML = "يرجى استكمال الحقول المطلوبة"
+                    notify("يرجى استكمال الحقول المطلوبة")
+                }
+                if(index == reqed.length - 1 && isSend){
+                        var httpGetJSON = new XMLHttpRequest;
+                        if (httpGetJSON.readyState == 4 || httpGetJSON.readyState == 0){
+                            httpGetJSON.open("POST", $server + "/add");
+                            httpGetJSON.onreadystatechange = function(){
+                                if (httpGetJSON.readyState == 4)
+                                {
+                                    if (httpGetJSON.status == 200)
+                                    {
+                                        if(httpGetJSON.responseText == "_ok-"){
+                                            document.getElementById("msg").innerHTML = "تمت إضافة الجهاز"
+                                            notify("تمت إضافة الجهاز", scroll = true)
+                                        } else {
+                                            document.getElementById("msg").innerHTML = "خطأ في الطلب"
+                                            notify("خطأ في الطلب", scroll = false)
+                                        }
+                                        console.log("server: " + httpGetJSON.responseText)
+                                    } else {
+                                        document.getElementById("msg").innerHTML = "خطأ في الشبكة - 200"
+                                    }
+                                }  else {
+                                    document.getElementById("msg").innerHTML = "خطأ في الشبكة - 4"
+                                }
+                            };
+                            httpGetJSON.send(formData);
+                        } else {
+                            document.getElementById("msg").innerHTML = "خطأ في الشبكة"
+                            notify( "خطأ في الشبكة", scroll = false)
+                        }
+                    }
+            }
+        }
+    }
+
+    document.getElementById("notifer").style.display = "none"
+
+    inputs = document.getElementsByClassName("textbox")
+    for (let index = 0; index < inputs.length; index++) {
+        const element = inputs[index];
+        element.value = ""
+    }
+
+    function notify(note){
+        document.getElementById("notifer").style.display = "block"
+        document.getElementById("note").innerHTML = "&nbsp;&nbsp;" + note
+
+        setTimeout(() => {
+            document.getElementById("notifer").style.display = "none"
+        }, 2000);
+    }
+
+    window.scrollTo(0,0)
+</script>
+
+<script>
+    function prepare(raw){
+        return raw.replaceAll(/&/g, "%26").replaceAll(/\'/g, "\\'").replaceAll(/\"/g, '\\"').replaceAll(/(?:\r\n|\r|\n)/g, '<br>')
+    }
+
+    templates["entry"] = _i$("temp-entry")
+    function login(target){
+        thisHTML = target.innerHTML
+        target.innerHTML = "جار الدخول..."
+        dataentry = _v$("login-ddataentry")
+
+        dcollege = _v$("login-dcollege")
+        dlab = _v$("login-dlab")
+        ddataentry = _v$("login-ddataentry")
+        dkey = _v$("login-dkey")
+
+        //_$("login").style.display = "none"
+        httpgo("https://waseemssaeed.pythonanywhere.com/mak/getuser/" , dkey, (result, error)=>{
+            if(result == "_ok-"){
+                _$("mainview").innerHTML = loadtemplate("entry", {
+                    dcollege: dcollege, //from cloud (todo)
+                    dlab: dlab,
+                    ddataentry: ddataentry,
+                    dkey: dkey,
+                    req: "req",
+                    getvalue: "getvalue",
+                    _name: "dname",
+                    _college: "dcollege",
+                    _lab: "dlab",
+                    _about: "dabout",
+                    _id: "did",
+                    _dataent: "ddataent",
+                    _img: "dimg",
+                    _type: "dtype",
+                    _key: "dkey",
+                    _why: "dwhy",
+                    _nameen: "dnameen",
+                    _status: "dstatus"
+                }) //todo
+            } else if (result == "nokey"){
+                target.innerHTML = "رمز الإدخال غير موجود"
+            } else {
+                target.innerHTML = "خطأ في الشبكة ، اضغط للمحاولة"
+            }
+        })
+    }
+</script>
+
+<script>
+    function addSpecialChar(e){
+        console.log("called: " + e.target.innerHTML)
+        _$("dabout").innerHTML = _v$("dabout") + e.target.innerHTML
+        _$("dabout").value = _v$("dabout") + e.target.innerHTML
+    }
+</script>
