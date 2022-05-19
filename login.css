@@ -1,0 +1,35 @@
+#login{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    background-color: white;
+    background-color: rgba(112, 128, 144, 0.623);
+}
+
+.login-card{
+    width: 4in;
+    margin-top: 10%;
+    background-color: whitesmoke;
+    padding-bottom: 30px;
+    padding-top: 30px;
+}
+.login-card label{
+    width: 90%;
+    text-align: right;
+}
+.login-card .inputgroup{
+    margin-right: 0px;
+    width: calc(100% - 20px);
+}
+
+@media screen and (max-width: 700px) {
+    .login-card{
+        width: calc(100vw - 25px);
+        margin-top: 30%;
+    }
+    .login-card .inputgroup{
+        width: 100%;
+    }
+}

@@ -58,7 +58,7 @@ a{
     width: calc(100% - 40px);
     margin: 10px;
     padding: 10px;
-    background-color: slategray;
+    background-color: slateblue;
     box-shadow: 0px 0px 2px 0px gray;
 }
 .warn-card .card-headline{
