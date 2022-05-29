@@ -30,71 +30,45 @@
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300&display=swap" rel="stylesheet"> 
     
     <meta property="og:site_name" content="مخبر | أطلق العنان" />
-    <meta name="image" property="og:image" content="https://makhbar.github.io/ar/logo.png"/>
+    <meta name="image" property="og:image" content="https://makhbar.github.io/fu/furatins.png"/>
     <meta property="og:image:type" content="image/jpg"> 
     <meta property="og:image:width" content="1024">
     <meta property="og:image:height" content="1024">
-    <meta name="twitter:title" content="مخبر | أطلق العنان" />
+    <meta name="twitter:title" content="مخبر | جامعة الفرات" />
 
-    <meta property='og:title' content="مخبر | أطلق العنان"/>
-    <meta property='og:image' content='https://makhbar.github.io/ar/logo.png'/>
+    <meta property='og:title' content="مخبر | جامعة الفرات"/>
+    <meta property='og:image' content='https://makhbar.github.io/fu/furatins.png'/>
     <meta property='og:description' content='أهلاً بك في مخبر - الرئيسية'/>
-    <meta property='og:url' content='https://makhbar.github.io/ar'/>
+    <meta property='og:url' content='https://makhbar.github.io/fu'/>
 
 
 </head>
 <body>
     <div id="nav">
         <div id="nav-logo" style="height: 100%;">
-            <img src="./logo.png" style="height: 100%;" alt="">
+            <img src="./furatins.png" style="height: 100%;" alt="">
         </div>
         <div class="desktopOnly navbtnsdiv">
             <a href="./adddevice.htm">
-                <button class="navbtn">أضف أجهزتك</button>
-            </a>
-            <a href="./adduniv.htm">
-                <button class="navbtn">أضف جامعتك</button>
+                <button class="navbtn">إضافة أجهزة</button>
             </a>
             <a href="./panel.htm">
-                <button class="navbtn">إدارة جامعتك</button>
+                <button class="navbtn">إدارة </button>
             </a>
-            <button class="navbtn disabled">ابحث</button>
-            <button class="navbtn disabled">جولة مخبر</button>
+            <button class="navbtn disabled">استعراض</button>
         </div>
         <div id="nav-menu-btn" class="disabled">
         </div>
     </div>
     <div id="nav-margin"></div>
     <div id="premainview">
-        <div class="card card-smalltext bg-dark" style="background-color: rgb(115, 104, 187);">
-            <label style="font-weight: bold;">اكتشف متعة اختبار الأشياء</label>
-            <label class="card-content">
-                يمكنك من خلال المنصة البحث عن أجهزة تخدم مشروعك في المخابر القريبة منك
-                ، كما يمكنك استخدام المخبر الافتراضي 
-            </label>
-        </div>
-        <div class="card card-smalltext bg-dark" style="background-color: rgb(64, 64, 64);">
-            <label style="font-weight: bold;" class="github-before">ساهم بجعلها مكاناً أفضل</label>
-            <label class="card-content">
-                نحن على GitHub
-                قم بعمل Fork للمشروع وساهم بإضافاتك الخاصة لجعل هذا المكان
-                مكاناً أفضل للشغوفين بالبحث العلمي
-            </label>
-            <div class="card-action">
-                <button class="github-before btn" dir="ltr">&nbsp; Fork on GitHub</button>
-            </div>
-        </div>
+
     </div>
 
     <div id="mainview" class="flex mobileOnly" style="padding-top: 10px;">
-        <a href="./adduniv.htm">
-            <div class="card card-smalltext bg-light flex-ch3in" style="cursor: inherit;">
-                <label style="font-weight: bold; cursor: pointer;" class="add-before before-teal">&nbsp; أضف جامعتك</label>
-            </div>
-        </a>
         <a href="./panel.htm">
             <div class="card card-smalltext bg-light flex-ch3in" style="cursor: inherit;">
-                <label style="font-weight: bold; cursor: pointer;" class="settings-before before-teal">&nbsp; إدارة جامعتك</label>
+                <label style="font-weight: bold; cursor: pointer;" class="settings-before before-teal">&nbsp; إدارة</label>
             </div>
         </a>
         <a href="./adddevice.htm">
@@ -114,7 +88,7 @@
                             0
                         </button>
                         <div style="display: block;">
-                            <span style="font-size: 20px; margin-top: 10px; display: block;">جامعة</span>
+                            <span style="font-size: 20px; margin-top: 10px; display: block;">جهاز متاح</span>
                         </div>
                     </center>
                 </div>
@@ -122,11 +96,9 @@
             <div class="card flex-ch3in" style="min-height: 2in; position: relative;">
                 <div style="padding-top: 10% ;">
                     <center>
-                        <button style="font-size: 50px; border: none; outline: none; width: 1in; height: 1in; border-radius: 50%;">
-                            0
-                        </button>
+                        <img src="./furatins.png" style="width: 1in;" alt="">
                         <div style="display: block;">
-                            <span style="font-size: 20px; margin-top: 10px; display: block;">جهاز متاح</span>
+                            <span style="font-size: 20px; margin-top: 10px; display: block;">جامعة الفرات</span>
                         </div>
                     </center>
                 </div>
@@ -147,34 +119,7 @@
     </center>
 
     <center>
-        <div id="footer">
-            جميع الحقوق محفوظة © <br>
-            Copyright © 
-        </div>
+
     </center>
 </body>
 </html>
-
-<script>
-    function copy(action, text, changecolor = true){
-        navigator.clipboard.writeText(text);
-        orignalHTML = action.innerHTML;
-        orignalBG = action.style.backgroundColor;
-        orignalColor = action.style.color;
-        action.innerHTML = " تم نسخ البريد الإلكتروني";
-        if(changecolor){
-            action.style.backgroundColor = "slateblue";
-        } else {
-            action.style.color = "steelblue";
-        }
-        setTimeout(()=>{
-            action.innerHTML = orignalHTML;
-            action.style.backgroundColor = orignalBG;
-            if(changecolor){
-                action.style.backgroundColor = orignalBG;
-            } else {
-                action.style.color = orignalColor;
-            }
-        }, 1000);
-    }
-</script>
